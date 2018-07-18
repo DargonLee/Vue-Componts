@@ -2,7 +2,7 @@
     <div class="hello">
         <h1>{{msg}}</h1>
         <button class="btn--default" @click="showModel">showModel</button>
-        <m-model :defaultShow="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
+        <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
             自定义内容
         </m-model>
     </div>
@@ -23,10 +23,10 @@ export default {
             this.show = true
         },
         okClick(){
-            this.show = false    
+              
         },
         cancelClick(){
-            this.show = false
+            
         }
     },
     components: {

@@ -1,5 +1,5 @@
 <template>
-    <div v-show="defaultShow" class="model-mask" transition="fade">
+    <div class="model-mask" transition="fade" v-show="defaultShow">
         <div class="model-wrapper-top">
             <div class="model-container-top" :style="{width:width + 'px'}">
                 <div class="model-header">
@@ -26,17 +26,32 @@ export default {
       type: String,
       default: "Model title"
     },
-    defaultShow: {
-      type: Boolean,
-      default: false
-    },
     width: {
       type: String,
       default: 400
+    },
+    value: {
+        type: Boolean,
+        default: false
     }
   },
   data() {
-    return {};
+    return {
+        defaultShow: false
+    };
+  },
+  watch: {
+      value(val){
+          this.defaultShow = val
+      },
+      defaultShow(val){
+        this.$emit('input', val)  
+      }
+  },
+  mounted () {
+      if(this.value){
+          this.defaultShow = true
+      }
   },
   methods: {
     okClick() {
@@ -44,7 +59,7 @@ export default {
         this.$emit("okClick");
     },
     cancelClick() {
-      this.defaultShow = false;
+      this.defaultShow = false
       this.$emit("cancelClick");
     }
   }
