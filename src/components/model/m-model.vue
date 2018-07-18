@@ -1,21 +1,21 @@
 <template>
-        <div v-show="defaultShow" class="model-mask" transition="fade">
-                <div class="model-wrapper-top">
-                    <div class="model-container-top" :style="{width:width + 'px'}">
-                        <div class="model-header">
-                            <span>{{title}}</span>
-                            <i class="close-empty"></i>
-                        </div>
-                        <div class="model-content">
-                            <slot></slot>
-                        </div>
-                        <div class="model-footer">
-                            <button class="form-addon btn" style="margin-right: 20px;" @click="okClick">确定</button>
-                            <button v-show="width != 400" class="form-addon btn--default" @click="cancelClick">取消</button>
-                        </div>
-                    </div>
+    <div v-show="defaultShow" class="model-mask" transition="fade">
+        <div class="model-wrapper-top">
+            <div class="model-container-top" :style="{width:width + 'px'}">
+                <div class="model-header">
+                    <span>{{title}}</span>
+                    <i class="close-empty"></i>
                 </div>
+                <div class="model-content">
+                    <slot></slot>
+                </div>
+                <div class="model-footer">
+                    <button class="btn--default" style="margin-right: 20px;" @click="okClick">确定</button>
+                    <button class="btn--default" v-show="width != 400" @click="cancelClick">取消</button>
+                </div>
+            </div>
         </div>
+    </div>
 </template>
 
 <script>
@@ -40,7 +40,8 @@ export default {
   },
   methods: {
     okClick() {
-      this.$emit("okClick");
+        this.defaultShow = false
+        this.$emit("okClick");
     },
     cancelClick() {
       this.defaultShow = false;

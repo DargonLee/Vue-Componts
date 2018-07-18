@@ -1,17 +1,37 @@
 <template>
-  <div class="hello">
-    
-  </div>
+    <div class="hello">
+        <h1>{{msg}}</h1>
+        <button class="btn--default" @click="showModel">showModel</button>
+        <m-model :defaultShow="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
+            自定义内容
+        </m-model>
+    </div>
 </template>
 
 <script>
+import mModel from "./model/m-model"
 export default {
-  name: "HelloWorld",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-  }
+    name: "HelloWorld",
+    data() {
+        return {
+            msg: "Demo 使用用例",
+            show: false
+        };
+    },
+    methods: {
+        showModel(){
+            this.show = true
+        },
+        okClick(){
+            this.show = false    
+        },
+        cancelClick(){
+            this.show = false
+        }
+    },
+    components: {
+        "m-model": mModel
+    }
 };
 </script>
 
