@@ -1,6 +1,6 @@
 # vuecomponts
 
-> A Vue.js project
+> 封装一些项目中常用的组件
 
 ## Build Setup
 
