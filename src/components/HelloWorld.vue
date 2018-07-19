@@ -1,10 +1,14 @@
 <template>
     <div class="hello">
-        <h1>{{msg}}</h1>
         <button class="btn--default" @click="showModel">showModel</button>
         <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
             自定义内容
         </m-model>
+        <code>
+            <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
+            自定义内容
+            </m-model>
+        </code>
     </div>
 </template>
 
