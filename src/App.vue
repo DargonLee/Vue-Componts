@@ -4,7 +4,11 @@
             <img src="./assets/logo.png">
             <h2>Vue2.0组件Demo</h2>
         </nav>
-        <div class="menu"></div>
+        <div class="menu">
+            <div class="menuItem" v-for="item in menuList">
+                <router-link active-class="selectedItem" :to="item.path">{{item.value}}</router-link>
+            </div>
+        </div>
         <div class="content">
             <router-view/>
         </div>
@@ -14,7 +18,25 @@
 
 <script>
 export default {
-  name: 'App'
+    name: 'App',
+    data() {
+        return {
+            selectedItem: '',
+            menuList: [
+                {
+                    value: 'Model 对话框(组件)',
+                    path: "/model1"
+                },
+                {
+                    value: 'Model 对话框(插件)',
+                    path: "2"
+                }
+            ]
+        }
+    },
+    methods: {
+        
+    }
 }
 </script>
 
@@ -49,6 +71,20 @@ img {
     width:200px;
     border-right: 1px solid rgb(234, 234, 234);
     float:left;
+}
+.menuItem {
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+}
+.selectedItem {
+    border-right: 3px solid #2d8cf0;
+    padding-right: 3px;
+    color: #2d8cf0;
+}
+.menuItem:hover {
+    cursor: pointer;
+    background: rgb(234, 234, 234);
 }
 .content {
     background: white;

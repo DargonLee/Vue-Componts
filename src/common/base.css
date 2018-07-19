@@ -39,6 +39,27 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
     background-color: #f7f7f7;
     border-color: #dddee1;
 }
+/* 在添加浮动的标签结尾处加空div标签 */
 .clearfloat{
     clear: both;
+}
+
+/* 给添加浮动的父级div加伪类 */
+.clearfix::after {
+    content: "";
+    display:block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+.coder{
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+a:hover{
+    color: #2d8cf0;
+    text-decoration-line: none;
 }
