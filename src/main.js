@@ -14,8 +14,10 @@ import App from './App'
 import router from './router'
 import './common/base.css'
 import coder from './components/coder/coder.vue'
+import subtitle from './components/subtitle/subtitle.vue'
 
 Vue.component('v-coder',coder)
+Vue.component('v-subtitle',subtitle)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

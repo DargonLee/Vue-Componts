@@ -10,8 +10,8 @@
                     <slot></slot>
                 </div>
                 <div class="model-footer">
-                    <button class="btn--default" style="margin-right: 20px;" @click="okClick">确定</button>
-                    <button class="btn--default" v-show="width != 400" @click="cancelClick">取消</button>
+                    <button class="btn--default marginRight" @click="cancelClick">取消</button>
+                    <button class="btn--default marginRight" @click="okClick">确定</button>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@ export default {
     },
     width: {
       type: String,
-      default: 400
+      default: 600
     },
     value: {
         type: Boolean,
@@ -118,8 +118,11 @@ export default {
   margin: 20px 0;
   height: 50px;
   background: white;
-  text-align: center;
+  text-align: right;
   line-height: 50px;
+}
+.marginRight {
+    margin-right: 20px;
 }
 .fade-enter .fade-container,
 .fade-leave .fade-container {

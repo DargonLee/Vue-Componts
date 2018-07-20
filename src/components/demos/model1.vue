@@ -4,21 +4,26 @@
         <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
             自定义内容
         </m-model>
+        <h3>使用方法</h3>
+        <v-subtitle>这个章节假设你已经对 Vue 组件有一定的了解。当然你也可以先跳过这里，稍后再回过头来看。</v-subtitle>
         <v-coder>
-            &lt;!DOCTYPE html&gt;
- 
-            &lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
-            &lt;head&gt;
-                &lt;meta charset="utf-8" /&gt;
-                &lt;title&gt;测试页面&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            &lt;div&gt;代码片段高亮效果&lt;/div&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
+            &lt;m-model v-model=&quot;show&quot; title=&quot;测试&quot; @okClick=&quot;okClick&quot; @cancelClick=&quot;cancelClick&quot;&gt;
+                自定义内容
+            &lt;/m-model&gt;
         </v-coder>
- 
-
+        <pre v-highlight>
+            <code>
+                methods: {
+                    showModel() {
+                        this.show = true;
+                    },
+                    okClick() {
+                    },
+                    cancelClick() {
+                    }
+                } 
+            </code>
+        </pre>
     </div>
 </template>
 
@@ -29,7 +34,17 @@ export default {
   data() {
     return {
       msg: "Demo 使用用例",
-      show: false
+      show: false,
+      htmls: `methods: {
+                    showModel() {
+                    this.show = true;
+                    },
+                    okClick() {
+
+                    },
+                    cancelClick() {
+                    }
+                } `
     };
   },
   methods: {
@@ -47,22 +62,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
   color: #42b983;
+}
+h3 {
+  text-align: left;
 }
 </style>

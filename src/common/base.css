@@ -18,7 +18,7 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
-    text-align: center;
+    /* text-align: center; */
     vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
@@ -55,7 +55,6 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 }
 .coder{
     border-radius: 10px;
-    padding: 15px;
     text-align: left;
 }
 

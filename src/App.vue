@@ -88,8 +88,9 @@ img {
 }
 .content {
     background: white;
-    padding: 10px;
+    padding: 15px;
     padding-left: 230px;
+    margin-left: 15px;
 }
 footer {
     clear: both;

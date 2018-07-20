@@ -1,6 +1,6 @@
 <template>
     <div>
-        <pre v-highlight class="coder">
+        <pre v-highlight>
             <code class="html coder">
                 <slot></slot>
             </code>
