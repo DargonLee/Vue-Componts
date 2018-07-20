@@ -6,7 +6,7 @@
         </nav>
         <div class="menu">
             <div class="menuItem" v-for="item in menuList">
-                <router-link active-class="selectedItem" :to="item.path">{{item.value}}</router-link>
+                <router-link class="item" active-class="selectedItem" :to="item.path">{{item.value}}</router-link>
             </div>
         </div>
         <div class="content">
@@ -79,7 +79,7 @@ img {
 }
 .selectedItem {
     border-right: 3px solid #2d8cf0;
-    padding-right: 3px;
+    padding-right: 8px;
     color: #2d8cf0;
 }
 .menuItem:hover {
@@ -94,5 +94,10 @@ img {
 footer {
     clear: both;
     background: red;
+}
+a {
+    display: block;
+    width: 100%;
+    padding-right: 5px;
 }
 </style>
