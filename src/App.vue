@@ -24,12 +24,12 @@ export default {
             selectedItem: '',
             menuList: [
                 {
-                    value: 'Model 对话框(组件)',
-                    path: "/model1"
+                    value: '概述',
+                    path: "/overview"
                 },
                 {
-                    value: 'Model 对话框(插件)',
-                    path: "2"
+                    value: 'Model 对话框(组件)',
+                    path: "/model1"
                 }
             ]
         }
@@ -45,7 +45,6 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 40px;
     background: rgb(234, 234, 234);

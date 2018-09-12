@@ -62,3 +62,7 @@ a:hover{
     color: #2d8cf0;
     text-decoration-line: none;
 }
+
+hr{
+    background-color: #eaecef;
+}
