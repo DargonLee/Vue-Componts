@@ -42,8 +42,17 @@
 
 ## API
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+### methods
+<br>
+
+| 事件名   |      说明      |  返回值 |
+|----------|:-------------:|------|
+| okClick |  确定事件 |  null |
+| cancelClick |    取消事件   |   null |
+
+<br>
+
+### props
+| 属性名   |      说明      |  默认值 |
+|----------|:-------------:|:------:|
+| title |  设置title |  - |
