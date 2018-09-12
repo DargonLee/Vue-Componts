@@ -66,3 +66,33 @@ a:hover{
 hr{
     background-color: #eaecef;
 }
+
+table {
+    border: 1px solid #e9e9e9;
+}
+table th {
+    background: #f7f7f7;
+    white-space: nowrap;
+    color: #5c6b77;
+    font-weight: 600;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+table td,table th {
+    border: 1px solid #e9e9e9;
+    padding: 8px 16px;
+    text-align: left;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
