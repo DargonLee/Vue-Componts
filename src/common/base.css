@@ -3,21 +3,34 @@
     font-size: 14px;
     line-height: 1.8;
 }
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+/*个性化设置样式*/
 h1 {
     font-size: 2em;
 }
 li{
 
 }
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
-    body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
-    a{color:#2d374b;text-decoration:none} 
-    a:hover{color:#cd0200;text-decoration:underline} 
-    em{font-style:normal}
-    img{border:0;vertical-align:middle} 
-    table{border-collapse:collapse;border-spacing:0} 
-    p{word-wrap:break-word}
 
+a:hover{
+    color: #2d8cf0;
+    text-decoration-line: none;
+}
+
+hr{
+    background-color: #eaecef;
+}
+
+
+/*自定义样式*/
 .btn--default {
     background: red;
     display: inline-block;
@@ -63,15 +76,8 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
     text-align: left;
 }
 
-a:hover{
-    color: #2d8cf0;
-    text-decoration-line: none;
-}
 
-hr{
-    background-color: #eaecef;
-}
-
+/*table的相关设置*/
 table {
     border: 1px solid #e9e9e9;
 }
