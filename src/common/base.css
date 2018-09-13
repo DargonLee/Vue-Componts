@@ -84,6 +84,7 @@ hr{
 
 /*table的相关设置*/
 table {
+    width: 100%;
     border: 1px solid #e9e9e9;
 }
 table th {

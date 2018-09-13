@@ -2,7 +2,7 @@
     <div id="app">
         <nav>
             <img src="./assets/logo.png">
-            <h2>Vue2.0组件Demo</h2>
+            <h2>myView组件库</h2>
         </nav>
         <div class="menu">
             <div class="menuItem" v-for="item in menuList">
@@ -12,7 +12,7 @@
         <div class="content">
             <router-view/>
         </div>
-        <footer>2018copyright</footer>
+        <footer>&copy2018myView</footer>
     </div>
 </template>
 
@@ -30,6 +30,10 @@ export default {
                 {
                     value: 'Model 对话框(组件)',
                     path: "/model1"
+                },
+                {
+                    value: 'Confirm 对话框(组件)',
+                    path: "/confirm1"
                 }
             ]
         }
@@ -97,11 +101,5 @@ footer {
     text-align: center;
     color: #2d8cf0;
     line-height: 44px;
-}
-a {
-    display: block;
-    width: 100%;
-    padding-right: 5px;
-    line-height: 40px;
 }
 </style>

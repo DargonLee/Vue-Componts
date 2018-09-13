@@ -1,5 +1,4 @@
-import msgboxVue from '../Confirm';
-
+import msgboxVue from './confirm.vue';
 // 定义插件对象
 const MessageBox = {};
 // vue的install方法，用于定义vue插件
@@ -14,9 +13,9 @@ MessageBox.install = function (Vue, options) {
     };
     // 在Vue的原型上添加实例方法，以全局调用
     Vue.prototype.$msgBox = {
-        showMsgBox (options) {
+        showMsgBox(options) {
             if (!currentMsg) {
-                initInstance();
+                initInstance()
             }
             if (typeof options === 'string') {
                 currentMsg.content = options;

@@ -15,18 +15,13 @@
             <div class="form-control">
               <input type="text" class="form-input" v-model="inputValue" placeholder="请输入内容">
             </div>
-            <small class="form-help desc">{{ smalldesc }}</small>
-          </div>
-          <div v-show="isShowDatePick" class="form-group" style="margin-top: 20px;">
-            <div>
-              <date-picker v-model="selectedDates" :range="true"></date-picker>
-            </div>
+            <small class="desc">{{ smalldesc }}</small>
           </div>
         </div>
         <div class="confirm-btns">
           <footer class="c-modalCard__footer">
             <button type="button" class="btn btn--default" style="background: lightgrey;" @click="cancel">取 消</button>
-            <button type="button" class="btn btn--primary" style="border-color: rgb(255,81,22);margin-left: 10px;" @click="confirm">确 定</button>
+            <button type="button" class="btn btn--primary" @click="confirm">确 定</button>
           </footer>
         </div>
       </div>
@@ -42,14 +37,13 @@
             },
             content: {
                 type: String,
-                default: '这是弹框内容'
+                default: '弹框内容'
             },
             smalldesc: {
                 type: String,
-                default: '这是输入框描述'
+                default: '输入框描述'
             },
             isShowInput: false,
-            isShowDatePick: false,
             inputValue: '',
             isShowCancelBtn: {
                 type: Boolean,
@@ -70,7 +64,6 @@
         },
         data () {
             return {
-                selectedDates: new Date(),
                 isShowMessageBox: false,
                 resolve: '',
                 reject: '',
@@ -140,7 +133,8 @@
     border-radius: 6px;
   }
   .desc{
-    margin-top: 20px;
+    display: block;
+    margin-top: 15px;
     color: lightgrey;
   }
   @media only screen and (max-width: 640px) {
@@ -165,18 +159,176 @@
   .modal-transition{
     transition: all .3s ease;
   }
+  .c-modalCard__header {
+    position: relative;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .c-modalCard__title {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    min-width: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 100%;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .c-modalCard__close {
+    font-size: 22px;
+    line-height: 1;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  .c-modalCard__body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 16px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
+  .c-modalCard__close {
+    font-size: 22px;
+    line-height: 1;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  .i-remove {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0.5;
+    color: #000;
+  }
+
+  .i-remove:before, .i-remove:after {
+    background-color: currentColor;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -25%;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+  }
+
+  .i-remove:before {
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .i-remove:after {
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .form-control {
+    position: relative;
+    margin-right: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    border: 1px solid #DFE3E9;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #7872ff;
+  }
+
+  .c-modalCard__footer {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 16px;
+    border-top: 1px solid #e1e1e1;
+    text-align: right;
+  }
+
+  .btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #0073AA;
+    height: 34px;
+    min-width: 34px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .btn--default {
+    color: #333333;
+    border-color: #ddd;
+    background-color: #fff;
+  }
+
+  .btn--primary {
+    color: #fff;
+    border-color: #7872ff;
+    background-color: #7872ff;
+    margin-left: 20px;
+  }
 </style>
-<!--
-用法
-open() {
-        this.$msgBox.showMsgBox({
-            title: '添加分类',
-            content: '请填写分类名称',
-            isShowInput: true
-        }).then(async (val) => {
-            // ...
-        }).catch(() => {
-            // ...
-        });
-},
--->
