@@ -40,7 +40,7 @@
 
 ## API
 
-### methods
+### events
 <br>
 
 | 事件名   |      说明      |  返回值 |
