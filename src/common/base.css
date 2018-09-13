@@ -57,6 +57,11 @@ hr{
     background-color: #f7f7f7;
     border-color: #dddee1;
 }
+.btn--success {
+    background-color: #2d8cf0;
+    color: white;
+    margin-right: 20px;
+}
 /* 在添加浮动的标签结尾处加空div标签 */
 .clearfloat{
     clear: both;

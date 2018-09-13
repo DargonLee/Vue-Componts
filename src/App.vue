@@ -75,6 +75,7 @@ img {
     text-align: center;
     line-height: 40px;
     font-size: 15px;
+    height: 40px;
 }
 .selectedItem {
     border-right: 3px solid #2d8cf0;
@@ -93,11 +94,14 @@ img {
 }
 footer {
     clear: both;
-    background: red;
+    text-align: center;
+    color: #2d8cf0;
+    line-height: 44px;
 }
 a {
     display: block;
     width: 100%;
     padding-right: 5px;
+    line-height: 40px;
 }
 </style>
