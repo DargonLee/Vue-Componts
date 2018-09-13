@@ -32,12 +32,20 @@ module.exports = {
         rules: [
             {
                 test: /\.md$/,
-                loader: 'vue-markdown-loader',
-                options: {
-                    preset: 'default',
-                    breaks: true,
-                    preventExtract: true
-                }
+                use: [
+                    {
+                        loader: 'vue-loader',
+                        options: {
+                            compilerOptions: {
+                                preserveWhitespace: false
+                            }
+                        }
+                    },
+                    {
+                        // loader: require.resolve('@tianyong90/vue-markdown-loader')
+                        loader: require.resolve('../src/loader/vue-markdown-loader/index.js')
+                    }
+                ]
             },
             {
                 test: /\.vue$/,
