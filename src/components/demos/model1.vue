@@ -1,15 +1,14 @@
 <template>
     <div class="hello">
-        <!--使用文档说明-->
-        <!--<h3>使用方法</h3>-->
-        <!--<v-subtitle>这个章节假设你已经对 Vue 组件有一定的了解。当然你也可以先跳过这里，稍后再回过头来看。</v-subtitle>-->
-        <model-mark v-highlight></model-mark>
-
         <h3 style="margin-top: 20px;">例子:</h3><br>
         <button class="btn--default" @click="showModel">showModel</button>
         <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
             自定义内容(可以填充自定义内容)
         </m-model>
+        <!--使用文档说明-->
+        <!--<h3>使用方法</h3>-->
+        <!--<v-subtitle>这个章节假设你已经对 Vue 组件有一定的了解。当然你也可以先跳过这里，稍后再回过头来看。</v-subtitle>-->
+        <model-mark v-highlight></model-mark>
     </div>
 </template>
 
