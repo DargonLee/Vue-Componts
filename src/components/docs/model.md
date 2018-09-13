@@ -7,6 +7,7 @@
  ```html
  //使用
  <template>
+    <button @click="showModel">showModel</button>
     <m-model v-model="show" title="测试" @okClick="okClick" @cancelClick="cancelClick">
                     自定义内容(可以填充自定义内容)
     </m-model>
