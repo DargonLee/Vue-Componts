@@ -85,6 +85,9 @@ img {
     border-right: 3px solid #2d8cf0;
     padding-right: 8px;
     color: #2d8cf0;
+    display: block;
+    line-height: 40px;
+    margin-right: -12px;
 }
 .menuItem:hover {
     cursor: pointer;
@@ -102,4 +105,5 @@ footer {
     color: #2d8cf0;
     line-height: 44px;
 }
+
 </style>
