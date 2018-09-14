@@ -28,16 +28,18 @@
                 type:[String, Number],
                 default:'发送验证码'
             },
+            isShowEyes:{
+                type: Boolean,
+                default:false
+            },
             value:String
         },
         data(){
             return {
-                isShowEyes: false,
                 isShowClear:false
             }
         },
         created(){
-            this.isShowEyes = !this.isVerify
             if (this.isShowEyes == false && this.type == 'password'){this.isShowEyes = true};
         },
         methods: {
@@ -70,19 +72,20 @@
 
 <style scoped>
 .box{
-    background: rosybrown;
     padding: 5px 5px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 20px 0 20px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
 }
 .box i{
     width: 23px;
     height: 15px;
     background: red;
-    background: url("../../static/images/eyes.png");
+    background: url("../../assets/eye-g@2x.png");
     background-position: center;
     background-size: cover;
 }
@@ -99,7 +102,7 @@ input{
     transform: scaleY(0.5);
     right: 0;
     transform-origin: 0 0;
-    border-top: 1px solid #d9d9d9;
+    /*border-top: 1px solid #d9d9d9;*/
     height: 1px;
     color: #d9d9d9;
 }
@@ -120,6 +123,10 @@ span{
 }
 a{
     margin: 0 5px;
+}
+input{
+    border: none;
+    outline: none;
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;

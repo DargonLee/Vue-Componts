@@ -38,6 +38,10 @@ export default {
                 {
                     value: '自定义PageView',
                     path: "/pageview"
+                },
+                {
+                    value: '自定义Input',
+                    path: "/input1"
                 }
             ]
         }

@@ -19,3 +19,5 @@ npm run dev
 - 组件目录：`src/components/`
 - 按需拖入你的项目
 - 详情见文档
+
+![预览图片](./src/assets/overview.png)

@@ -5,6 +5,7 @@ import Overview from '@/components/demos/overview'
 import Hello from '@/components/hello'
 import Confirm from '@/components/demos/confirm1'
 import PageView from '@/components/demos/pageview'
+import InputView from '@/components/demos/input1'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
             path: '/pageview',
             name: 'pageview',
             component: PageView
+        },
+        {
+            path: '/input1',
+            name: 'input1',
+            component: InputView
         }
     ]
 })
