@@ -13,13 +13,11 @@ Vue.directive('highlight',function (el) {
 import App from './App'
 import router from './router'
 import './common/base.css'
-import coder from './components/coder/coder.vue'
 import subtitle from './components/subtitle/subtitle.vue'
 
 import MessageBox from "./components/confirm/index"
 Vue.use(MessageBox)
 
-Vue.component('v-coder',coder)
 Vue.component('v-subtitle',subtitle)
 Vue.config.productionTip = false
 
