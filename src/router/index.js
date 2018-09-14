@@ -4,6 +4,7 @@ import Model1 from '@/components/demos/model1'
 import Overview from '@/components/demos/overview'
 import Hello from '@/components/hello'
 import Confirm from '@/components/demos/confirm1'
+import PageView from '@/components/demos/pageview'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
             path: '/confirm1',
             name: 'confirm1',
             component: Confirm
+        },
+        {
+            path: '/pageview',
+            name: 'pageview',
+            component: PageView
         }
     ]
 })

@@ -43,14 +43,17 @@ Vue.use(MessageBox)
 
 <br>
 
+## API
+
+
 ### props
-| 属性名   |      说明      |  默认值 |
-|----------|:-------------:|:------:|
-| title |  设置title |  标题 |
-| content |  弹框内容 |  弹框内容 |
-| smalldesc |  这是输入框描述 |  输入框描述 |
-| isShowInput |  是否显示输入框 |  false |
-| isShowCancelBtn |  是否显示取消按钮 |  true |
-| isShowConfimrBtn |  是否显示确定按钮 |  true |
-| cancelBtnText |  取消按钮文本 |  取消 |
-| confirmBtnText |  确定按钮文本 |  确定 |
+| 属性名   |      说明      | 类型 |  默认值 |
+|----------|:-------------:|:----:|:------:|
+| title |  设置title | String | 标题 |
+| content |  弹框内容 | String | 弹框内容 |
+| smalldesc |  这是输入框描述 | String | 输入框描述 |
+| isShowInput |  是否显示输入框 | Boolean |false |
+| isShowCancelBtn |  是否显示取消按钮 | Boolean | true |
+| isShowConfimrBtn |  是否显示确定按钮 | Boolean |  true |
+| cancelBtnText |  取消按钮文本 | String | 取消 |
+| confirmBtnText |  确定按钮文本 | String | 确定 |

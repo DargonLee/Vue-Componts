@@ -34,6 +34,10 @@ export default {
                 {
                     value: 'Confirm 对话框(组件)',
                     path: "/confirm1"
+                },
+                {
+                    value: '自定义PageView',
+                    path: "/pageview"
                 }
             ]
         }
