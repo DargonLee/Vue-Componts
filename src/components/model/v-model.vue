@@ -28,7 +28,7 @@
             event: "change"//当你emit change的时候 参数值就是父组件v-model所能接收到的值
         },
         props: {
-            checked: {
+            checked: {//控制视图显示和隐藏的属性
                 type: Boolean,
                 default: false
             },
@@ -42,7 +42,7 @@
             }
         },
         data() {
-            return { //控制视图显示和隐藏的属性
+            return {
                 defaultShow: false
             };
         },
