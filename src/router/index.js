@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Model1 from '@/components/demos/model1'
+import Model2 from '@/components/demos/model2'
 import Overview from '@/components/demos/overview'
 import Hello from '@/components/hello'
 import Confirm from '@/components/demos/confirm1'
@@ -25,6 +26,12 @@ export default new Router({
             path: '/model1',
             name: 'Model1',
             component: Model1
+        },
+        {
+            path: '/model2',
+            name: 'Model2',
+            component: Model2
+
         },
         {
             path: '/confirm1',

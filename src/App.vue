@@ -32,6 +32,10 @@ export default {
                     path: "/model1"
                 },
                 {
+                    value: 'Model2 对话框(组件)',
+                    path: "/model2"
+                },
+                {
                     value: 'Confirm 对话框(组件)',
                     path: "/confirm1"
                 },
