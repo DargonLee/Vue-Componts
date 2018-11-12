@@ -46,6 +46,10 @@ export default {
                 {
                     value: '自定义Input',
                     path: "/input1"
+                },
+                {
+                    value: 'Axios的封装',
+                    path: "/axios"
                 }
             ]
         }

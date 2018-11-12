@@ -7,6 +7,7 @@ import Hello from '@/components/hello'
 import Confirm from '@/components/demos/confirm1'
 import PageView from '@/components/demos/pageview'
 import InputView from '@/components/demos/input1'
+import Axios from '@/components/demos/axios'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
             path: '/input1',
             name: 'input1',
             component: InputView
+        },
+        {
+            path: '/axios',
+            name: 'axios',
+            component: Axios
         }
     ]
 })
